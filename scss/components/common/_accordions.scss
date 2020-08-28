@@ -1,7 +1,10 @@
 .accordion{
-	border: 1px solid $pale;
 	transition: all $t;
 	position: relative;
+
+	&:not(.xs-accordion){
+		border: 1px solid $pale;
+	}
 
 	&:after{
 		content: '';
@@ -36,9 +39,15 @@
 
 	.ac-content{
 		padding: 0 20px 20px;
-		display: none;
 		position: relative;
 		z-index: 2;
+
+	}
+
+	&:not(.xs-accordion){
+		.ac-content{
+			display: none;
+		}
 	}
 
 	.ac-opener{
