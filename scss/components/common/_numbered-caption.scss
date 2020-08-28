@@ -1,0 +1,56 @@
+.numbered-caption-scope{
+	counter-reset: captions;
+
+	.numbered-caption{
+		counter-increment: captions;
+		position: relative;
+		padding-left: 104px;
+		margin-bottom: 25px;
+
+		&:before{
+			content: counter(captions);
+			font-size: inherit;
+			color: $primary;
+			position: absolute;
+			left: 0;
+			margin-right: 8px;
+			transform: translateY(1px);
+		}
+
+		&:after{
+			content: '';
+			display: block;
+			width: 70px;
+			height: 1px;
+			background: #213a39;
+			border-right: 8px solid $primary;
+			position: absolute;
+			left: 18px;
+			top: 13px;
+		}
+
+		@media screen and (max-width: 1439px){
+			padding-left: 65px;
+
+			&:after{
+				width: 35px;
+			}
+		}
+
+		@media screen and (max-width: 575px){
+			padding-left: 0;
+			font-size: 13px;
+
+			&:before{
+				content: counter(captions)'.';
+				position: static;
+				display: inline-block;
+				margin-right: 10px;
+			}
+
+			&:after{
+				display: none;
+			}
+		}
+	}
+}

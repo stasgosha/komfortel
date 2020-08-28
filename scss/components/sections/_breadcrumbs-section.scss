@@ -1,0 +1,32 @@
+.breadcrumbs-section{
+	padding-bottom: 20px;
+}
+
+.breadcrumbs{
+	display: flex;
+	flex-wrap: wrap;
+
+	li{
+		font-size: 12px;
+
+		&:after{
+			content: '   \\   ';
+			color: #4a5764;
+			font-size: inherit;
+		}
+
+		a{
+			color: #f4fcf9;
+
+			&:hover{
+				color: $primary;
+			}
+		}
+
+		&:last-child{
+			&:after{
+				display: none;
+			}
+		}
+	}
+}

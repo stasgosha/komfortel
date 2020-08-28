@@ -1,0 +1,249 @@
+.stages-section{
+	padding: 170px 0 80px;
+
+	.section-caption{
+		margin-bottom: 45px;
+	}
+
+	@media screen and (max-width: 767px){
+		padding-top: 50px;
+	}
+}
+
+
+@media screen and (min-width: 992px){
+	.stages-list{
+		display: flex;
+
+		.item{
+			margin-right: 5px;
+			transition: all $t;
+			width: calc((100% - 420px - 5px * 4) / 4);
+
+			&:last-child{
+				margin-right: 0;
+			}
+
+			&.opened{
+				width: 420px;
+				flex: none;
+			}
+
+			@media screen and (max-width: 1439px){
+				width: calc((100% - 320px - 5px * 4) / 4);
+
+				&.opened{
+					width: 320px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px){
+	.stages-list.slick-dotted{
+		margin-bottom: 0 !important;
+	}
+}
+
+.stage-card{
+	display: flex;
+	flex-direction: column;
+	transition: all $t;
+	position: relative;
+
+	&:before{
+		width: 44px;
+		height: 44px;
+		background: $body-bg url("data:image/svg+xml,%3Csvg width='6' height='6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23213a39' d='M0 0h1v1H0zM1 5h1v1H1zM2 4h1v1H2zM3 3h1v1H3zM4 2h1v1H4zM5 1h1v1H5z'/%3E%3C/svg%3E");
+		background-size: 6px 6px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		font-size: 30px;
+		color: $primary;
+		border-left: 1px solid $pale;
+		border-top: 1px solid $pale;
+		font-family: $main-font;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 2;
+	}
+
+	.card-image{
+		height: 340px;
+		position: relative;
+		background: $pale;
+
+		img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			object-fit: cover;
+			object-position: center center;
+		}
+	}
+
+	.card-content{
+		padding: 20px 25px 30px;
+		margin-top: 6px;
+		border: 1px solid transparent;
+		border-top: 0;
+		position: relative;
+		overflow: hidden;
+
+		&:before,
+		&:after{
+			content: '';
+			display: block;
+			width: 4px;
+			height: 4px;
+			background: $body-bg;
+			box-shadow: 4px 4px 0 $body-bg,
+						4px -4px 0 $body-bg,
+						-4px 4px 0 $body-bg,
+						-4px -4px 0 $body-bg;
+			position: absolute;
+			transition: all $t;
+			opacity: 0;
+		}
+
+		&:before{
+			left: 0;
+			bottom: 0;
+			border-bottom: 1px solid #fff;
+			border-left: 1px solid #fff;
+		}
+
+		&:after{
+			right: 0;
+			bottom: 0;
+			border-bottom: 1px solid #fff;
+			border-right: 1px solid #fff;
+		}
+	}
+
+	.card-hidden-content{
+		width: calc(420px - 25px * 2) !important;
+		padding-top: 15px;
+
+		p{
+			margin-bottom: 10px;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			strong{
+				color: #fff;
+			}
+		}
+
+		@media screen and (max-width: 1439px){
+			width: calc(320px - 25px * 2) !important;
+		}
+	}
+
+	.card-caption{
+		color: #fff;
+		transition: all $t;
+	}
+
+	.card-footer{
+		margin-top: 15px;
+		display: flex;
+	}
+
+	.card-time{
+		color: $primary;
+		font-size: 12px;
+		text-transform: uppercase;
+		padding-bottom: 5px;
+		border-bottom: 1px solid $primary;
+	}
+
+	@media screen and (min-width: 992px){
+		.opened &{
+			.card-content{
+				border-color: $pale;
+
+				&:before,
+				&:after{
+					opacity: 1;
+				}
+			}
+
+			.card-caption{
+				color: $primary;
+			}
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		height: 100%;
+
+		.card-hidden-content{
+			width: 100% !important;
+		}
+
+		.card-content{
+			border-color: $pale;
+			flex: auto;
+
+			&:before,
+			&:after{
+				opacity: 1;
+			}
+		}
+
+		.card-caption{
+			color: $primary;
+		}
+	}
+
+	@media screen and (max-width: 1259px){
+		.card-content{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+}
+
+.stage-cards-scope{
+	counter-reset: stage;
+
+	.stage-card{
+		counter-increment: stage;
+
+		&:before{
+			content: counter(stage);
+		}
+	}
+}
+
+.slider-nav{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+
+	.slick-dots{
+		width: auto;
+		position: static !important;
+		margin: 0 35px;
+	}
+
+	.slick-arrow{
+		position: static !important;
+		transform: none;
+
+		&.slick-next{
+			order: 3;
+		}
+	}
+}

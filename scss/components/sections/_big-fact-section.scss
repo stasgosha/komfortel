@@ -1,0 +1,29 @@
+.big-fact-section{
+	background: url("data:image/svg+xml,%3Csvg width='6' height='6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%231A2A2D' d='M0 0h1v1H0zM1 5h1v1H1zM2 4h1v1H2zM3 3h1v1H3zM4 2h1v1H4zM5 1h1v1H5z'/%3E%3C/svg%3E") repeat center center, url(../img/backgrounds/big-fact-bg.jpg) no-repeat center center / cover;
+	// min-height: 47.6vw;
+	min-height: 100vh;
+	display: flex;
+	background-attachment: fixed;
+
+	@media screen and (max-width: 1024px){
+		background-attachment: scroll;
+	}
+
+	.container{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	@media screen and (max-width: 991px) and (min-width: 576px){
+		.big-fact-block{
+			max-width: 60%;
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		padding: 30px 0;
+		min-height: unset;
+		background: transparent;
+	}
+}

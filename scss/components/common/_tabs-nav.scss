@@ -1,0 +1,56 @@
+.tabs-nav{
+	display: flex;
+	white-space: nowrap;
+	justify-content: center;
+	border: 1px solid $primary;
+	border-radius: 5px;
+	margin-left: auto;
+	margin-right: auto;
+
+	.tab-nav-btn{
+		min-width: 225px;
+		padding: 0 20px;
+		min-height: 34px;
+		font-size: 15px;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: $primary;
+
+		&:first-child{
+			border-radius: 4px 0 0 4px;
+		}
+
+		&:last-child{
+			border-radius: 0 4px 4px 0;
+		}
+
+		&.current{
+			background: $primary;
+			color: $body-bg;
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		.tab-nav-btn{
+			min-width: unset;
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		.tab-nav-btn{
+			font-size: 12px;
+		}
+	}
+}
+
+.tabs-nav-wrapper{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 60px;
+
+	@media screen and (max-width: 767px){
+		margin-bottom: 40px;
+	}
+}

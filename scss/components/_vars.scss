@@ -1,0 +1,25 @@
+// Fonts
+$main-font: 'Montserrat', Arial, sans-serif;
+$second-font: $main-font;
+// $third-font: 'Playfair Display SC', serif;
+
+// Colors
+$azure: #6ad3b1;
+$pale: #213a39;
+
+$dark: #222;
+$gray: #2A2B2D;
+$light: #99A2B4;
+
+$text-color: #95adac;
+$text-dark: #11171d;
+$text-light: #fff;
+
+$primary: $azure;
+$accent: $azure;
+
+// Params
+$body-bg: #11171d; // site background
+$t: .2s; // animation duration
+$r: 5px; // default border radius
+$shadow: 0px 5px 15px rgba(0, 0, 0, 0.08); // default card shadow

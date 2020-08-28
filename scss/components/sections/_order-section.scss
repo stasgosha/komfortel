@@ -1,0 +1,117 @@
+.order-section{
+	padding: 140px 0;
+	position: relative;
+
+	@media screen and (max-width: 767px){
+		padding: 50px 0;
+	}
+}
+
+.order-block{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 160px 0 130px;
+	position: relative;
+	background: $body-bg;
+	border: 1px solid $pale;
+
+	&:before,
+	&:after{
+		content: '';
+		display: block;
+		width: 85px;
+		height: 85px;
+		position: absolute;
+		border-left: 1px solid $primary;
+		position: absolute;
+		left: 0;
+	}
+
+	&:before{
+		top: 0;
+		border-top: 1px solid $primary;
+	}
+
+	&:after{
+		bottom: 0;
+		border-bottom: 1px solid $primary;
+	}
+
+	.block-inner{
+		width: 100%;
+		max-width: 940px;
+		padding: 0 50px;
+
+		&:after{
+			content: '';
+			display: block;
+			width: 85px;
+			height: 85px;
+			position: absolute;
+			border-right: 1px solid $primary;
+			border-bottom: 1px solid $primary;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+	}
+
+	.section-caption{
+		margin-bottom: 50px;
+		max-width: 840px;
+		margin-left: auto;
+		margin-right: auto;
+
+		.sc-title{
+			margin-bottom: 0;
+		}
+
+		.sc-subtitle{
+			color: $text-color;
+			font-size: 16px;
+			max-width: 835px;
+		}
+
+		&:after{
+			max-width: 100%;
+		}
+	}
+
+	@media screen and (max-width: 1259px){
+		padding: 90px 0 60px;
+	}
+
+	@media screen and (max-width: 767px){
+		padding: 60px 0;
+
+		.section-caption{
+			margin-bottom: 20px;
+		}
+
+		.block-inner{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+}
+
+.order-form{
+	.btn{
+		width: 100%;
+		max-width: 380px;
+	}
+
+	@media screen and (min-width: 768px){
+		.form-row:last-child,
+		.form-row.last{
+			margin-top: 70px;
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		max-width: 380px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
