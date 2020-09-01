@@ -117,7 +117,18 @@ document.addEventListener('DOMContentLoaded', function(){
 				dots: false,
 				infinite: false,
 				speed: 600,
-				fade: true
+				fade: true,
+				responsive: [
+					{
+						breakpoint: 768,
+						settings: {
+							...arrowsButtons,
+							dots: true,
+							appendArrows: $(el).find('#mobile-terms-slider-nav'),
+							appendDots: $(el).find('#mobile-terms-slider-nav')
+						}
+					}
+				]
 			});
 
 			$(el).find('.terms-slider').on('beforeChange', function(e, s, current, next){
