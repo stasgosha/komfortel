@@ -1,6 +1,11 @@
 .accordion{
 	transition: all $t;
 	position: relative;
+	margin-bottom: 25px;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
 
 	&:not(.xs-accordion){
 		border: 1px solid $pale;
@@ -24,13 +29,14 @@
 		padding: 20px;
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		position: relative;
 		z-index: 2;
 
-		&:after{
-			content: '';
-			display: block;
-		}
+		// &:after{
+		// 	content: '';
+		// 	display: block;
+		// }
 
 		.numbered-caption{
 			margin-bottom: 0;
@@ -107,6 +113,11 @@
 @media screen and (max-width: 575px){
 	.xs-accordion{
 		display: block;
+		border: 1px solid $pale;
+
+		.ac-content{
+			display: none;
+		}
 	}
 
 	.xs-small-caption{

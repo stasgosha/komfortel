@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Условия сотрудничества | Komfortel</title>
 
+	<link rel="stylesheet" href="css/odometer-theme-minimal.css">
 	<link rel="stylesheet" href="css/slick.min.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
@@ -89,19 +90,22 @@
 							<div class="cmp-battery">
 								<div class="battery-block step-3">
 									<div class="block-percents">
-										<div class="block-text"></div>
+										<div class="block-text">
+											<span class="odometer" data-val="15"></span>
+											<sup>%</sup>
+										</div>
 										<div class="block-line"></div>
 									</div>
 									<div class="block-image">
 										<div class="bi-inner">
-											<div class="block-division" data-percents="100"></div>
-											<div class="block-division" data-percents="95"></div>
-											<div class="block-division" data-percents="85"></div>
-											<div class="block-division" data-percents="70"></div>
-											<div class="block-division" data-percents="60"></div>
-											<div class="block-division" data-percents="35"></div>
-											<div class="block-division" data-percents="25"></div>
-											<div class="block-division" data-percents="15"></div>
+											<button class="block-division" data-slide="8" data-percents="100"></button>
+											<button class="block-division" data-slide="7" data-percents="95"></button>
+											<button class="block-division" data-slide="6" data-percents="85"></button>
+											<button class="block-division" data-slide="5" data-percents="70"></button>
+											<button class="block-division" data-slide="4" data-percents="60"></button>
+											<button class="block-division" data-slide="3" data-percents="35"></button>
+											<button class="block-division" data-slide="2" data-percents="25"></button>
+											<button class="block-division" data-slide="1" data-percents="15"></button>
 										</div>
 									</div>
 								</div>
@@ -338,6 +342,7 @@
 	<script src="js/particles-settigs.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/wow.min.js"></script>
+	<script src="js/odometer.min.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
 </html>

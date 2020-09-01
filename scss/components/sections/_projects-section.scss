@@ -134,6 +134,8 @@
 			content: '';
 			display: block;
 			padding-top: 63.47%;
+			background: #175654;
+			transition: all $t;
 		}
 
 		img{
@@ -207,6 +209,10 @@
 		}
 
 		.card-image{
+			&:before{
+				opacity: 0;
+			}
+
 			img{
 				filter: saturate(1);
 				opacity: 1;

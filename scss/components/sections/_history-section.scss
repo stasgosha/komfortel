@@ -287,6 +287,22 @@
 		}
 	}
 
+	&.active{
+		.card-caption{
+			&:before{
+				opacity: .4;
+			}
+		}
+
+		&:hover{
+			.card-caption{
+				&:before{
+					opacity: .15;
+				}
+			}
+		}
+	}
+
 	.item:nth-child(odd) &{
 		text-align: right;
 	}

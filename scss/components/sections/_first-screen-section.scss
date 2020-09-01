@@ -107,82 +107,89 @@
 
 		li{
 			margin-bottom: 64px;
-			border: 1px solid $pale;
-			padding: 9px 10px 9px 24px;
-			position: relative;
-			font-size: 15px;
-			color: #fff;
 
 			&:last-child{
 				margin-bottom: 0;
 			}
+			
+			.item-text{
+				border: 1px solid $pale;
+				padding: 9px 10px 9px 24px;
+				position: relative;
+				font-size: 15px;
+				color: #fff;
 
-			&:before{
-				content: '';
-				display: block;
-				width: 9px;
-				height: calc(100% + 2px);
-				position: absolute;
-				left: -1px;
-				top: -1px;
-				border: 1px solid $primary;
-				border-right: 0;
-			}
-
-			&:after{
-				content: '';
-				display: block;
-				width: 7px;
-				height: 7px;
-				background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='7'%3E%3Cpath fill-rule='evenodd' fill='%236AD3B1' d='M7 4H4v3H3V4H0V3h3V0h1v3h3v1z'/%3E%3C/svg%3E") no-repeat center center / contain;
-				position: absolute;
-				right: -4px;
-				top: calc(50% - 3px);
-			}
-
-			.item-line{
-				width: 38px;
-				height: 1px;
-				border-top: 1px dotted #264d4c;
-				position: absolute;
-				top: 50%;
-				left: 100%;
-				transform-origin: left center;
+				&:before{
+					content: '';
+					display: block;
+					width: 9px;
+					height: calc(100% + 2px);
+					position: absolute;
+					left: -1px;
+					top: -1px;
+					border: 1px solid $primary;
+					border-right: 0;
+				}
 
 				&:after{
 					content: '';
 					display: block;
-					width: 17px;
-					height: 17px;
-					border-radius: 50%;
-					background: $primary;
-					border: 6px solid $pale;
-					box-shadow: 0 -4px 0 $body-bg, 0 4px 0 $body-bg;
+					width: 7px;
+					height: 7px;
+					background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='7'%3E%3Cpath fill-rule='evenodd' fill='%236AD3B1' d='M7 4H4v3H3V4H0V3h3V0h1v3h3v1z'/%3E%3C/svg%3E") no-repeat center center / contain;
+					position: absolute;
+					right: -4px;
+					top: calc(50% - 3px);
+				}
+
+				.item-line{
+					width: 38px;
+					height: 1px;
+					border-top: 1px dotted #264d4c;
 					position: absolute;
 					top: 50%;
-					left: calc(100% + 3px);
-					transform: translateY(-50%);
+					left: 100%;
+					transform-origin: left center;
+
+					&:after{
+						content: '';
+						display: block;
+						width: 17px;
+						height: 17px;
+						border-radius: 50%;
+						background: $primary;
+						border: 6px solid $pale;
+						box-shadow: 0 -4px 0 $body-bg, 0 4px 0 $body-bg;
+						position: absolute;
+						top: 50%;
+						left: calc(100% + 3px);
+						transform: translateY(-50%);
+					}
 				}
 			}
 
 			&:first-child{
-				.item-line{
-					top: auto;
-					bottom: 0;
-				}
+				.item-text{
+					.item-line{
+						top: auto;
+						bottom: 0;
+					}
 
-				&:after{
-					top: calc(100% - 3px);
+					&:after{
+						top: calc(100% - 3px);
+					}
 				}
 			}
 
 			&:last-child{
-				.item-line{
-					top: 0;
-				}
+				.item-text{
+					.item-line{
+						top: 0;
+					}
 
-				&:after{
-					top: calc(0% - 3px);
+					&:after{
+						top: calc(0% - 3px);
+					}
 				}
 			}
 
@@ -190,8 +197,10 @@
 			&:nth-child(5){
 				transform: translateX(105px);
 
-				.item-line{
-					width: 38px;
+				.item-text{
+					.item-line{
+						width: 38px;
+					}
 				}
 			}
 
@@ -199,31 +208,33 @@
 			&:nth-child(4){
 				transform: translateX(20px);
 
-				.item-line{
-					width: 47px;
+				.item-text{
+					.item-line{
+						width: 47px;
+					}
 				}
 			}
 
 			&:nth-child(1){
-				.item-line{
+				.item-text .item-line{
 					transform: rotate(45deg);
 				}
 			}
 
 			&:nth-child(2){
-				.item-line{
+				.item-text .item-line{
 					transform: rotate(20deg);
 				}
 			}
 
 			&:nth-child(4){
-				.item-line{
+				.item-text .item-line{
 					transform: rotate(-20deg);
 				}
 			}
 
 			&:nth-child(5){
-				.item-line{
+				.item-text .item-line{
 					transform: rotate(-45deg);
 				}
 			}
@@ -237,12 +248,15 @@
 			width: 215px;
 
 			li{
-				font-size: 14px;
-				padding: 9px 10px;
 				margin-bottom: 67px;
 
 				&:last-child{
 					margin-bottom: 0;
+				}
+
+				.item-text{
+					font-size: 14px;
+					padding: 9px 10px;
 				}
 			}
 		}

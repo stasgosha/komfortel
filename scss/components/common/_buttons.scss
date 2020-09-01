@@ -111,6 +111,11 @@
 		.btn-text:after{
 			display: none;
 		}
+
+		&:not(.no-hover):hover{
+			background: transparent;
+			color: $primary;
+		}
 	}
 
 	&.btn-light{
